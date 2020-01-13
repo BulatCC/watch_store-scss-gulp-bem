@@ -1,0 +1,104 @@
+.about {
+  background-image: linear-gradient(
+    to right, #F7F5EF 31%, $bg-color 31%, $bg-color 70%
+  );
+  margin-bottom: 80px;
+}
+
+.about__wrapper {
+  display: flex;
+  position: relative;
+  width: 1012px;
+  margin: 0 auto;
+  padding-top: 52px;
+  padding-bottom: 15px;
+  background-image: linear-gradient(
+    to right, #F7F5EF 29%, $bg-color 29%, $bg-color 70%
+  );
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -177px;
+    width: 279px;
+    height: 282px;
+    background-image: url('../img/Ellipse-small.svg');
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -176px;
+    width: 354px;
+    height: 519px;
+    background-image: url('../img/Ellipse-big.svg');
+  }
+}
+
+.about__slider {
+  margin-right: 70px;
+  text-align: right;
+}
+
+.about__slider-container {
+  margin-bottom: 14px;
+}
+
+.slider__control {
+  position: relative;
+  width: 20px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    border-right: 1px solid #1B1A17;
+    border-top: 1px solid #1B1A17;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+  }
+}
+
+.slider__control-right {
+  margin-right: 82px;
+}
+
+.slider__control-left {
+  &::before {
+    left: 1px;
+    transform: rotate(225deg);
+  }
+}
+
+.slider__number {
+  font-family: 'Prata', serif;
+  font-size: 0.9rem;
+}
+
+.about__title {
+  margin-top: 90px;
+  margin-bottom: 27px;
+  font-family: 'playfairdisplay', serif;
+  font-weight: 400;
+  font-size: 2.22rem;
+}
+
+.about__info {
+  margin-bottom: 38px;
+  max-width: 400px;
+  line-height: 150%;
+}
+
+.about__catalog-link {
+  max-width: 205px;
+  background-color: #D4B098;
+  @include hover-active;
+}

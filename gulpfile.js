@@ -36,7 +36,7 @@ gulp.task("copy", function () {
 
 
 gulp.task("css", function () {
-  return gulp.src("source/less/style.less")
+  return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -96,7 +96,7 @@ gulp.task("images", function () {
 
 gulp.task("webp", function(){
   return gulp.src("source/img/**/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
+  .pipe(webp({quality: 95}))
   .pipe(gulp.dest("build/img/webp"));
 });
 

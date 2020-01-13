@@ -1,0 +1,143 @@
+.promo {
+  background-color: #FDFDFB;
+  margin-top: -70px;
+  margin-bottom: 70px;
+}
+
+.promo__wrapper {
+  display: flex;
+  align-items: center;
+  width: 1285px;
+  margin: 0 auto;
+}
+
+.promo__social-links {
+  @include reset-list;
+  margin-left: 15px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.promo__social-links li {
+  margin-bottom: 10px;
+}
+
+.promo__social-links a {
+  @include hover-active;
+}
+
+.promo__container {
+  margin-left: 112px;
+  margin-bottom: -30px;
+}
+
+.promo__title {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 10px;
+  font-family: 'playfairdisplay', serif;
+  font-size: 2.8rem;
+  font-weight: normal;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: #8B8371;
+    top: 27px;
+    left: -60px;
+  }
+}
+
+.promo__word {
+  margin-bottom: 30px;
+  font-family: 'playfairdisplay', serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.promo__slogan {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 64px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.promo__catalog-link {
+  max-width: 205px;
+  background-color: #444240;
+  @include hover-active;
+}
+
+.promo__container-img {
+  position: relative;
+  margin-left: 137px;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 496px;
+    height: 768px;
+    left: -195px;
+    top: 10px;
+    background: url('../img/Ellipse_promo@1x.png') no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/Ellipse_promo@2x.png");
+    }
+  }
+}
+
+.promo__image {
+  position: relative;
+  z-index: 1;
+}
+
+.promo__price {
+  position: absolute;
+  top: 145px;
+  left: -80px;
+  font-family: 'Prata', serif;
+  font-size: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 13px;
+    top: 5px;
+    left: 60px;
+    background: url('../img/ruble.svg')
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    top: 11px;
+    left: 85px;
+    background-color: #8B8371;
+  }
+}
+
+.promo__size {
+  position: absolute;
+  min-width: 140px;
+  top: 645px;
+  left: 465px;
+  font-family: 'Prata', serif;
+  font-size: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    top: 11px;
+    left: -65px;
+    background-color: #8B8371;
+  }
+}

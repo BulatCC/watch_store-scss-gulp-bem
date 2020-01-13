@@ -1,0 +1,61 @@
+.page-footer {
+  background-color: #444240;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 983px;
+  margin: 0 auto;
+  padding-top: 79px;
+  padding-bottom: 67px;
+}
+
+.page-footer ul {
+  @include reset-list;
+}
+
+.page-footer__link,
+.page-footer__email {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  color: white;
+  opacity: 0.75;
+}
+
+.page-footer__link {
+  @include hover-active;
+}
+
+ .page-footer__title,
+ .page-footer__logo {
+  margin-bottom: 27px;
+  color: white;
+  font-size: 0.87rem;
+  text-transform: uppercase;
+}
+
+.page-footer__logo {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+  font-family: 'playfairdisplay', serif;
+  font-style: normal;
+  font-weight: 700;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/Ellipse-footer.png);
+    background-repeat: no-repeat;
+    top: -15px;
+    left: -35px;
+    width: 34px;
+    height: 34px;
+  }
+
+  @include hover-active;
+}
+
+
