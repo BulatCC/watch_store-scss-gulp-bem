@@ -1,0 +1,38 @@
+.catalog {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.catalog__sorting-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.catalog__title {
+  font-family: 'playfairdisplay', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-right: auto;
+}
+
+.catalog__sorting {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  overflow: hidden;
+  color: #BDB9B5;
+}
+
+.catalog__sorting > span {
+  margin-right: 5px;
+}
+
+.catalog__sorting-select {
+  border: none;
+}
+
+.catalog__container {
+  display: flex;
+}

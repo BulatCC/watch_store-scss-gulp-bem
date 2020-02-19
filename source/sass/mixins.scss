@@ -13,3 +13,37 @@
     opacity: 0.4;
   }
 }
+
+@mixin filter-closed {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 11px;
+    right: 5px;
+    top: 0px;
+    background-color: #1B1A17;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 1px;
+    right: 0;
+    top: 5px;
+    background-color: #1B1A17;
+  }
+}
+
+@mixin filter-opened {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    top: 5px;
+    background-color: #1B1A17;
+  }
+}

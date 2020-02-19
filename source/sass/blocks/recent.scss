@@ -1,0 +1,42 @@
+.recent {
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.recent__title {
+    margin-bottom: 50px;
+    margin-left: 100px;
+    font-family: 'playfairdisplay', serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.recent__slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent .slider__control {
+  &::before {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.recent .slider__control-left {
+  margin-left: 50px;
+}
+
+.recent .slider__control-right {
+  margin-right: 50px;
+}
+
+.recent__item {
+  min-width: 360px;
+}
+
+.recent__image {
+  max-height: 300px;
+  max-width: 250px;
+}

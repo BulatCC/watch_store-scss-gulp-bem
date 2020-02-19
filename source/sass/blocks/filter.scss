@@ -1,0 +1,94 @@
+.filter {
+  margin-right: 93px;
+  min-width: 230px;
+}
+
+.filter__title {
+  position: relative;
+  margin-bottom: 25px;
+  font-size: 0.87rem;
+  cursor: pointer;
+
+  @include hover-active;
+  @include filter-closed;
+}
+
+.filter__title--active {
+  @include filter-opened;
+}
+
+.filter__range-slider {
+  display: none;
+}
+
+.filter__item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+
+.filter__title--active + .filter__range-slider {
+  display: block;
+}
+.filter__title--active + .filter__list-brand,
+.filter__title--active + .filter__list-mechanism,
+.filter__title--active + .filter__list-material,
+.filter__title--active + .filter__list-color {
+  display: block;
+  margin-bottom: 35px;
+}
+
+.filter__list {
+  display: none;
+  margin-bottom: 20px;
+  @include reset-list;
+}
+
+.filter__input + label {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0px;
+    border: 1px solid #909090;
+  }
+}
+
+.filter__input:checked + label {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    left: 0px;
+    background-color: #909090;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    top: 4px;
+    left: 5px;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    transform: rotate(-45deg);
+  }
+}
+
+.filter__input:hover + label,
+.filter__input:focus + label {
+  cursor: pointer;
+  @include hover-active;
+}
+
+.filter__button {
+  width: 100%;
+  background-color: white;
+  color: #1D1A1A;
+  border: 2px solid #E7E0CF;
+  cursor: pointer;
+  @include hover-active;
+}

@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  font-style: normal;
+  font-style: normal; //medium
   font-weight: 500;
   src: url('../fonts/Robotomedium.woff2') format('woff2'),
        url('../fonts/Robotomedium.woff') format('woff');
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  font-style: normal;
+  font-style: normal; //bold
   font-weight: 700;
   src: url('../fonts/Robotobold.woff2') format('woff2'),
        url('../fonts/Robotobold.woff') format('woff');
@@ -33,7 +33,7 @@
 @font-face {
   font-family: 'playfairdisplay', serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400; //regular
   src: url('../fonts/playfairdisplay.woff2') format('woff2'),
        url('../fonts/playfairdisplay.woff') format('woff');
 }

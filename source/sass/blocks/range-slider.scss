@@ -1,0 +1,53 @@
+.range-slider {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.range-slider__scale {
+  width: 100%;
+  height: 1px;
+  background-color: #D4D4D4;
+}
+
+.range-slider__bar {
+  width: 80%;
+  height: 1px;
+  background-color: #1B1A17;
+}
+
+.range-slider__toggle {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #1B1A17;
+  border-radius: 50%;
+  background-color: white;
+  top: -4px;
+  cursor: pointer;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 9px;
+    top: 15px;
+    left: 25px;
+    background: url('../img/ruble.svg');
+  }
+}
+
+.range-slider__toggle--max {
+  left: 80%;
+}
+
+.range-slider__price {
+  position: absolute;
+  top: 12px;
+  max-width: 80px;
+  border: none;
+  font-size: 0.75rem;
+  outline: none;
+}
+
+.range-slider__price--max {
+  left: -15px
+}

@@ -1,0 +1,94 @@
+.mail-promo {
+  background-color: #f7f5ef;
+  margin-bottom: 80px;
+}
+
+.mail-promo__wrapper {
+  position: relative;
+  display: flex;
+  width: 1366px;
+  margin: 0 auto;
+  padding-left: 139px;
+  padding-right: 103px;
+  padding-top: 70px;
+  padding-bottom: 91px;
+  box-sizing: border-box;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 354px;
+    height: 181px;
+    background: url('../img/Ellipse-promo-email-2.svg') no-repeat;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 196px;
+    height: 221px;
+    background: url('../img/Ellipse-promo-email-3.svg') no-repeat;
+  }
+}
+
+.mail-promo__container {
+  position: relative;
+  margin-right: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: -138px;
+    width: 388px;
+    height: 293px;
+    background: url('../img/Ellipse-promo-email-1.svg') no-repeat;
+  }
+}
+
+.mail-promo__text {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #818181;
+  text-transform: uppercase;
+}
+
+.mail-promo__title {
+  position: relative;
+  z-index: 1;
+  max-width: 505px;
+  font-family: 'playfairdisplay', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.81rem;
+}
+
+.mail-promo__form {
+  display: flex;
+  margin-top: auto;
+}
+
+.mail-promo__input {
+  margin-right: 33px;
+  min-width: 278px;
+  font-size: 0.87rem;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #1B1A17;
+}
+
+.mail-promo__button {
+  z-index: 10;
+  min-width: 185px;
+  background-color: #31302C;
+  cursor: pointer;
+  @include hover-active;
+}

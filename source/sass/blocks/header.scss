@@ -1,13 +1,22 @@
-.page-header__index-bg {
+.page-header {
+  margin-bottom: 57px;
+}
+
+.page-header__index {
   background-color: $bg-color;
+  margin-bottom: 0;
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 1285px;
+  max-width: 1160px;
   margin: 0 auto;
   padding-top: 40px;
+}
+
+.page-header__wrapper--index {
+  max-width: 1285px;
 }
 
 .page-header__container {
@@ -67,6 +76,7 @@
 
 .page-header__logo {
   position: relative;
+  margin-left: 20px;
   font-size: 0.75rem;
   font-family: 'playfairdisplay', serif;
   text-transform: uppercase;
@@ -86,6 +96,10 @@
   }
 
   @include hover-active;
+}
+
+.page-header__logo--index {
+  margin-left: 0;
 }
 
 .nav {

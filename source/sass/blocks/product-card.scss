@@ -1,0 +1,134 @@
+.product-card {
+  width: 1160px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.product-card__container {
+  display: flex;
+}
+
+.product-card__photo-container {
+  width: 560px;
+  box-sizing: border-box;
+  margin-right: auto;
+}
+
+.product-card__photo-full {
+  max-width: 500px;
+  max-height: 520px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.product-card__photo-full-image {
+  max-width: 500px;
+  max-height: 520px;
+  margin-top: -30px;
+}
+
+.product-card__preview-list {
+  display: flex;
+  justify-content: space-between;
+  @include reset-list;
+}
+
+.product-card__preview-item {
+  max-width: 127px;
+  max-height: 121px;
+  background-color: #e8e8e8;
+
+  &--active {
+    background-color: transparent;
+  }
+}
+
+.product-card__preview-image {
+  max-width: 127px;
+  max-height: 121px;
+}
+
+.product-card__description {
+  max-width: 560px;
+  padding-left: 60px;
+  padding-right: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  background-color: $bg-color;
+  color: #444240;
+}
+
+.product-card__description-title {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-card__description-price {
+  position: relative;
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  color: #686868;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 19px;
+    top: 5px;
+    left: 82px;
+    background: url('../img/ruble.svg') no-repeat;
+  }
+}
+
+.product-card__description-container {
+  display: flex;
+}
+
+.product-card__description-type {
+  position: relative;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.product-card__description-type--active {
+  @include hover-active;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 25px;
+    right: -1px;
+    background-color: #C4C0B6;
+  }
+}
+
+.product-card__description-text-container {
+  display: none;
+  margin-bottom: 60px;
+}
+
+.product-card__description-text-container--active {
+  display: block;
+}
+
+.product-card__description-text {
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 0.87rem;
+  line-height: 23px;
+}
+
+.product-card__description-button {
+  min-width: 185px;
+  background-color: #31302C;
+  cursor: pointer;
+  @include hover-active;
+}
