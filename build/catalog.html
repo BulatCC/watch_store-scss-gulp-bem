@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <title>Магазин часов</title>
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="visually-hidden">Интернет магазин часов</h1>
+    <div class="page-header__wrapper">
+      <div class="page-header__container">
+        <a href="index.html" class="page-header__logo">Conquest</a>
+      </div>
+      <ul class="page-header-nav nav">
+        <li class="nav__item nav__item--active"><a class="nav__item-link" href="#">Каталог</a></li>
+        <li class="nav__item"><a class="nav__item-link" href="#">Акции</a></li>
+        <li class="nav__item"><a class="nav__item-link" href="#">Доставка</a></li>
+        <li class="nav__item"><a class="nav__item-link" href="#">Контакты</a></li>
+      </ul>
+      <div class="user-list">
+        <a class="user-list__item-search" href="#"><img src="img/search.svg" width="16px" height="16px" alt="поиск"></a>
+        <a class="user-list__item-favorite" href="#"><img src="img/heart.svg" width="19px" height="16px" alt="избранное"></a>
+        <span class="user-list__favorite-number">1</span>
+        <a class="user-list__item-cart" href="#"><img src="img/cart.svg" width="18px" height="16px" alt="корзина"></a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="catalog">
+      <ul class="catalog__breadcrumps breadcrumps">
+        <li class="breadcrumps__item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumps__item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumps__item breadcrumps__item--active">Мужские часы</li>
+      </ul>
+      <div class="catalog__sorting-container">
+        <h1 class="catalog__title">Мужские часы</h1>
+        <div class="catalog__sorting">
+          <span>Сортировать по:</span>
+          <form class="catalog__sorting-form" autocomplete="off" action="#">
+            <select name="sorting-select" id="sorting-select" class="catalog__sorting-select">
+              <option value="popular">популярности</option>
+              <option value="cheap">дешевые сверху</option>
+              <option value="expensive">дорогие сверху</option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div class="catalog__container">
+        <form class="filter">
+          <fieldset>
+            <h3 class="filter__title filter__title--active">Стоимость</h3>
+            <div class="filter__range-slider  range-slider">
+              <div class="range-slider__scale">
+                <div class="range-slider__bar"></div>
+              </div>
+              <div class="range-slider__toggle range-slider__toggle--min">
+                <input class="range-slider__price range-slider__price--min" type="text" value="0" readonly="">
+              </div>
+              <div class="range-slider__toggle range-slider__toggle--max">                <input class="range-slider__price range-slider__price--max" type="text" value="80000" readonly=""></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <h3 class="filter__title filter__title--active">Бренд</h3>
+            <ul class="filter__list filter__list-brand">
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Techne" id="Techne" checked=""><label for="Techne">Techne</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Rado" id="Rado" checked=""><label for="Rado">Rado</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Bvlgari" id="Bvlgari" checked=""><label for="Bvlgari">Bvlgari</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Tissot" id="Tissot"><label for="Tissot">Tissot</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Omega" id="Omega"><label for="Omega">Omega</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Montblanc" id="Montblanc"><label for="Montblanc">Montblanc</label></li>
+            </ul>
+            <h3 class="filter__title">Механизм</h3>
+            <ul class="filter__list filter__list-mechanism">
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Mechanical" id="Mechanical"><label for="Mechanical">Механический</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Quartz" id="Quartz"><label for="Quartz">Кварцевый</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <h3 class="filter__title">Материал</h3>
+            <ul class="filter__list filter__list-material">
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Silver" id="Silver"><label for="Silver">Серебро</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Gold" id="Gold"><label for="Gold">Золото</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Titan" id="Titan"><label for="Titan">Титан</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <h3 class="filter__title">Цвет</h3>
+            <ul class="filter__list filter__list-color">
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Gray" id="Gray"><label for="Gray">Серый</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Black" id="Black"><label for="Black">Черный</label></li>
+              <li class="filter__item"><input class="filter__input visually-hidden" type="checkbox" name="Beige" id="Beige"><label for="Beige">Бежевый</label></li>
+            </ul>
+            <button class="button filter__button" type="reset">Сбросить фильтр</button>
+          </fieldset>
+        </form>
+        <section class="goods">
+          <ul class="goods__list">
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Techne</h3>
+                  <span class="goods__price">12 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_1@1x.webp 1x, img/webp/catalog-watch_1@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_1@1x.png" srcset="img/catalog-watch_1@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Techne</h3>
+                  <span class="goods__price">12 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_2@1x.webp 1x, img/webp/catalog-watch_2@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_2@1x.png" srcset="img/catalog-watch_2@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Techne</h3>
+                  <span class="goods__price">15 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_3@1x.webp 1x, img/webp/catalog-watch_3@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_3@1x.png" srcset="img/catalog-watch_3@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Techne</h3>
+                  <span class="goods__price">15 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_4@1x.webp 1x, img/webp/catalog-watch_4@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_4@1x.png" srcset="img/catalog-watch_4@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Techne</h3>
+                  <span class="goods__price">12 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_5@1x.webp 1x, img/webp/catalog-watch_5@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_5@1x.png" srcset="img/catalog-watch_5@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__promo">
+              <div class="goods__promo-container"><span class="goods__promo-dicsount">-20%</span>
+              <p class="goods__promo-text">На вторую позицию в чеке</p></div>
+              <picture>
+                <source type="image/webp" srcset="img/webp/catalog-promo@1x.webp 1x, img/webp/catalog-promo@2x.webp 2x">
+                  <img class="goods__promo-image" src="img/catalog-promo@1x.png" srcset="img/catalog-promo@2x.png 2x" alt="часы Techne">
+              </picture>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Techne</h3>
+                  <span class="goods__price">18 500</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_6@1x.webp 1x, img/webp/catalog-watch_6@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_6@1x.png" srcset="img/catalog-watch_6@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Techne</h3>
+                  <span class="goods__price">15 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_7@1x.webp 1x, img/webp/catalog-watch_7@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_7@1x.png" srcset="img/catalog-watch_7@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Rado</h3>
+                  <span class="goods__price">14 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_8@1x.webp 1x, img/webp/catalog-watch_8@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_8@1x.png" srcset="img/catalog-watch_8@2x.png 2x" alt="часы Rado">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Bvlgari</h3>
+                  <span class="goods__price">72 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_9@1x.webp 1x, img/webp/catalog-watch_9@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_9@1x.png" srcset="img/catalog-watch_9@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Techne</h3>
+                  <span class="goods__price">22 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_10@1x.webp 1x, img/webp/catalog-watch_10@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_10@1x.png" srcset="img/catalog-watch_10@2x.png 2x" alt="часы Techne">
+                </picture>
+              </a>
+            </li>
+            <li class="goods__list-item">
+              <div class="goods__container">
+                <div class="goods__container-price">
+                  <h3 class="goods__title">Rado</h3>
+                  <span class="goods__price">22 700</span>
+                </div>
+              <div class="goods__container-icons">
+                <span class="goods__favourite"></span>
+                <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+              </div>
+            </div>
+              <a class="goods__link" href="product.html">
+                <picture>
+                  <source type="image/webp" srcset="img/webp/catalog-watch_5@1x.webp 1x, img/webp/catalog-watch_5@2x.webp 2x">
+                    <img class="goods__image" src="img/catalog-watch_5@1x.png" srcset="img/catalog-watch_5@2x.png 2x" alt="часы Rado">
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="pagination__container">
+        <a class="pagination__icon pagination__icon-left" href="#"></a>
+        <ul class="pagination-list">
+          <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+          <li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
+          <li class="pagination-item"><span class="pagination-link pagination-link--active">3</span></li>
+          <li class="pagination-item"><a class="pagination-link" href="#">...</a></li>
+          <li class="pagination-item"><a class="pagination-link" href="#">12</a></li>
+      </ul>
+      <a class="pagination__icon pagination__icon-right" href="#"></a>
+      </div>
+    </section>
+    <section class="mail-promo">
+      <div class="mail-promo__wrapper">
+        <div class="mail-promo__container">
+          <span class="mail-promo__text">Подписка на рассылку</span>
+          <h3 class="mail-promo__title">Получить скидку 10% на первую покупку</h3>
+        </div>
+        <form class="mail-promo__form" action="#" method="POST">
+          <input class="mail-promo__input" type="text" placeholder="E-mail">
+          <button class="mail-promo__button button" type="submit">Подписаться</button>
+        </form>
+      </div>
+    </section>
+    <section class="watchband-catalog">
+      <div class="watchband-catalog__container">
+        <h3 class="watchband-catalog__title">Ремешки</h3>
+        <a href="#" class="watchband-catalog__show-all-link">Смотреть все</a>
+      </div>
+      <div class="watchband-catalog__slider-container">
+        <button class="slider__control  slider__control-left" type="button"></button>
+        <ul class="goods__list">
+          <li class="goods__list-item watchband-catalog__item slider-item">
+            <div class="goods__container">
+              <div class="goods__container-price">
+                <h3 class="goods__title">Georg Jensen</h3>
+                <span class="goods__price">6 500</span>
+              </div>
+            <div class="goods__container-icons">
+              <span class="goods__favourite"></span>
+              <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+            </div>
+          </div>
+            <a class="goods__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/webp/watchband_1@1x.webp 1x, img/webp/watchband_1@2x.webp 2x">
+                  <img class="goods__image watchband-catalog__image" src="img/watchband_1@1x.png" srcset="img/watchband_1@2x.png 2x" alt="ремешек >Georg Jensen">
+              </picture>
+            </a>
+          </li>
+          <li class="goods__list-item watchband-catalog__item slider-item">
+            <div class="goods__container">
+              <div class="goods__container-price">
+                <h3 class="goods__title">Nato</h3>
+                <span class="goods__price">3 200</span>
+              </div>
+            <div class="goods__container-icons">
+              <span class="goods__favourite"></span>
+              <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+            </div>
+          </div>
+            <a class="goods__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/webp/watchband_2@1x.webp 1x, img/webp/watchband_2@2x.webp 2x">
+                  <img class="goods__image watchband-catalog__image" src="img/watchband_2@1x.png" srcset="img/watchband_2@2x.png 2x" alt="ремешек Nato">
+              </picture>
+            </a>
+          </li>
+          <li class="goods__list-item watchband-catalog__item slider-item">
+            <div class="goods__container">
+              <div class="goods__container-price">
+                <h3 class="goods__title">Spark</h3>
+                <span class="goods__price">5 400</span>
+              </div>
+            <div class="goods__container-icons">
+              <span class="goods__favourite"></span>
+              <a href="#"><img src="img/cart.svg" alt="" class="goods-cart"></a>
+            </div>
+          </div>
+            <a class="goods__link" href="#">
+              <picture>
+                <source type="image/webp" srcset="img/webp/watchband_3@1x.webp 1x, img/webp/watchband_3@2x.webp 2x">
+                  <img class="goods__image watchband-catalog__image" src="img/watchband_3@1x.png" srcset="img/watchband_3@2x.png 2x" alt="ремешек Spark">
+              </picture>
+            </a>
+          </li>
+        </ul>
+        <button class="slider__control slider__control-right" type="button"></button>
+    </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <ul>
+        <li><a class="page-footer__logo" href="#">Conquest</a></li>
+        <li><a class="page-footer__link" href="tel:+74994504797">8 (499) 450-47-97
+        </a></li>
+        <li class="page-footer__email">info@conquest.watch.ru</li>
+      </ul>
+      <ul>
+        <li><h4 class="page-footer__title">О компании</h4></li>
+        <li><a class="page-footer__link" href="#">Наши магазины</a></li>
+        <li><a class="page-footer__link" href="#">Вакансии</a></li>
+        <li><a class="page-footer__link" href="#">Сертификаты</a></li>
+        <li><a class="page-footer__link" href="#">Отзывы</a></li>
+      </ul>
+      <ul>
+        <li><h4 class="page-footer__title">Покупателям</h4></li>
+        <li><a class="page-footer__link" href="catalog.html">Каталог товаров</a></li>
+        <li><a class="page-footer__link" href="#">Как заказать?</a></li>
+        <li><a class="page-footer__link" href="#">FAQ</a></li>
+        <li><a class="page-footer__link" href="#">Корпоративным клиентам</a></li>
+      </ul>
+      <ul>
+        <li><h4 class="page-footer__title">Оплата и доставка</h4></li>
+        <li><a class="page-footer__link" href="#">Способы оплаты</a></li>
+        <li><a class="page-footer__link" href="#">Время доставки</a></li>
+        <li><a class="page-footer__link" href="#">Гарантии и ремонт</a></li>
+        <li><a class="page-footer__link" href="#">Возврат и компенсация</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
